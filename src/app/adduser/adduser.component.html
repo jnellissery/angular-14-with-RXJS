@@ -1,0 +1,20 @@
+<form [formGroup]="fg">
+  <label>Title</label>
+  <input formControlName="title" />
+  <div
+    class="error"
+    *ngIf="fg.get('title').touched && fg.get('title').hasError('required')"
+  >
+    The field is required
+  </div>
+  <br />
+  <label>Body</label>
+  <textarea formControlName="body"></textarea>
+  <div
+    class="error"
+    *ngIf="fg.get('body').touched && fg.get('body').hasError('required')"
+  >
+    The field is required
+  </div>
+</form>
+<button [disabled]="fg.invalid" (click)="save()">Add</button>

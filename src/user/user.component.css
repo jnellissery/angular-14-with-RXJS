@@ -1,0 +1,23 @@
+.row{
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+}
+.column{
+  flex-basis: 0;
+  min-width: 130px;
+  height: 100px;
+  border: 1px solid;
+  margin: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.column:hover span{
+  display:none ;
+}
+.column:hover:after{
+  content:'View List';
+  cursor: pointer;
+}
