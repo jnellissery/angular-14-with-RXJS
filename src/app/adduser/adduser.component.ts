@@ -33,7 +33,7 @@ export class AdduserComponent implements OnInit {
   
     this.fg = this.fb.group({
       title: ['', [Validators.required]],
-      body: ['', [Validators.required, Validators.maxLength(100)]],
+      body: ['', [Validators.required, Validators.maxLength(500)]],
     });
     this.fg.controls['title'].setValue(selectuser.title);
     this.fg.controls['body'].setValue(selectuser.body);
